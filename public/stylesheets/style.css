@@ -21,3 +21,13 @@ h3{
 #banner {
   width: 1524px;
 }
+
+.btn {
+  width: 250px;
+  height: 100%;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  float: right;
+
+}
