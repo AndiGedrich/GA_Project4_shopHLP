@@ -1,14 +1,16 @@
 angular.module('shopHLP')
   .controller('BusinessController', BusinessController);
 
-  BusinessController.$inject = ['Businesses'];
+  BusinessController.$inject = ['$stateParams', 'BusinessService'];
 
-  function BusinessController($stateParams, businesses){
+  function BusinessController($stateParams, BusinessService){
     var vm = this;
 
-    //vm.businesses = Businesses.businesses;
-    //vm.types = Businesses.types;
-    //vm.selectedType = vm.types[0];
+    vm.test = "BIDNESS"
 
-    //vm.business = businesses.businesses[$stateParams.id];
+    vm.businesses = BusinessService.businesses;
+    vm.types = BusinessService.types;
+    vm.selectedType = vm.types[0];
+
+    vm.business = BusinessService.businesses[$stateParams.id];
   }

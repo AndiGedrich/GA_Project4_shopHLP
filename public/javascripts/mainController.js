@@ -1,8 +1,13 @@
 angular.module('shopHLP')
   .controller('MainController', MainController);
 
-function MainController(){
-  var vm = this;
+  MainController.$inject = ['BusinessService'];
 
-  vm.test = "Test"
-}
+  function MainController(BusinessService){
+    var vm = this;
+
+    vm.test = "Test";
+
+    vm.types = BusinessService.types;
+    vm.selectedType = vm.types[0];
+  }
