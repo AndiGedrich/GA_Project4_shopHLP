@@ -41,4 +41,7 @@ router.get('/ping', function(req, res){
   res.status(200).send('pong');
 });
 
+///////businesses API Routing
+var
+
 module.exports = router;

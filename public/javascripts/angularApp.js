@@ -4,6 +4,12 @@ angular
 
   function MainRouter($stateProvider, $urlRouterProvider){
 
+    $stateProvider
+      .state('business'{
+        url: '/business/{id}',
+        templateUrl: '/businessPage.ejs',
+      });
+
    $urlRouterProvider.otherwise('/');
   }
 
