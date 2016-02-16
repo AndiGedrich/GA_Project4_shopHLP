@@ -4,5 +4,5 @@ angular.module('shopHLP')
 function MainController(){
   var vm = this;
 
-  vm.test = "Andrea"
+  vm.test = "Test"
 }
