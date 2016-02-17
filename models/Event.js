@@ -6,7 +6,9 @@ var EventSchema = mongoose.Schema({
   startDate: Date,
   endDate: Date,
   startTime: String,
-  endTime: String
+  endTime: String,
+  address: String,
+  cost: Number
 });
 
-module.exports = mongoose.model('Business', BusinessSchema);
+module.exports = mongoose.model('Event', EventSchema);

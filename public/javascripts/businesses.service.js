@@ -1,5 +1,6 @@
 angular.module('shopHLP')
-  .factory('BusinessService', ['$http', function($http){
+  .factory('BusinessService', ['$http', function($resource){
+
 
     var service = {};
 
@@ -156,6 +157,15 @@ angular.module('shopHLP')
       });
       return Object.keys(obj).sort();
     };
+
+    getBusinesses();
+    function getBusinesses(){
+      $http
+        .get('http://localhost:3000/businesses')
+        .then(function(response){
+          self.all = response.data.businesses;
+        });
+    }
 
 
   }]);

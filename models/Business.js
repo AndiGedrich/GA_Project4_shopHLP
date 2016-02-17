@@ -1,5 +1,23 @@
 var mongoose = require('mongoose');
 
+var CategorySchema = mongoose.Schema({
+  category: String,
+  image: String
+})
+
+var HoursSchema = mongoose.Schema({
+  day: String,
+  times: String
+})
+
+var EventsSchema = mongoose.Schema({
+  title: String,
+  dayOfWeek: String,
+  startDate: Date,
+  endDate: Date,
+  startTime: String,
+  endTime: String,
+})
 var BusinessSchema = mongoose.Schema({
   name: String,
   type: String,
@@ -8,23 +26,10 @@ var BusinessSchema = mongoose.Schema({
   phone: String,
   website: String,
   storefront: String,
-  categories: [
-          { category: String,
-            image: String},
-          ],
-  hours: [
-        { day: String,
-          times: String },
-        ],
-  events: [
-        { title: String,
-          startDate: Date,
-          endDate: Date,
-          startTime: String,
-          endTime: String }
-        ],
+  categories: [CategorySchema],
+  hours: [HoursSchema],
+  events: [EventsSchema],
   about: String
-      },
-});
+})
 
 module.exports = mongoose.model('Business', BusinessSchema);
