@@ -1,0 +1,43 @@
+<div class="container">
+    <div ng-controller="CalendarController as vm">
+      <h2 class="text-center">HLP Happenings</h2>
+
+      <div class="row">
+
+        <br class="visible-xs visible-sm">
+
+        <div class="col-md-6">
+          <div class="btn-group">
+            <label class="btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">Month</label>
+            <label class="btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">Week</label>
+            <label class="btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">Day</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <p>{{vm.date | amDateFormat: 'dddd, MMMM Do YYYY'}}</p>
+          <span class="glyphicon glyphicon-chevron-right"></span>
+            <h2>{{vm.date | amDateFormat: 'MMMM YYYY'}}</h2>
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+      </div>
+
+      <table border="3" cellspacing="3" cellpadding="3">
+        <tr>
+          <td>Sunday</td>
+          <td>Monday</td>
+          <td>Tuesday</td>
+          <td>Wednesday</td>
+          <td>Thursday</td>
+          <td>Friday</td>
+          <td>Saturday</td>
+        </tr>
+        <tr>
+          <td ng-repeat="days in month">
+
+        </table>
+
+      <br>
+
+    </div>

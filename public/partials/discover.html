@@ -1,0 +1,28 @@
+<div class="row" id="discover" ng-controller="BusinessController as biz">
+  <div class="col-xs-4 col-md-4" id="">
+    <h2> DISCOVER</h2>
+  </div>
+  <div class="col-xs-4 col-md-4" id="4935york">
+    <img class="btn" id="yorkbtn" src="images/York.jpg">
+  </div>
+
+  <div class="col-xs-4 col-md-4" id="figueroa">
+    <img class="btn" id="figst" src="images/Fig.jpg">
+  </div>
+</div>
+
+    <!-- storefront display -->
+<div class="row" ng-controller="BusinessController as biz">
+  <div class="container slider">
+    <figure id="storeFronts" ng-repeat="businesses in biz.businesses">
+      <img  id="storeFronts" ng-src="{{businesses.storefront}}" />
+      <figcaption id="storeFrontAddress">{{businesses.name}}</figcaption>
+    </figure>
+  </div>
+    <a class="arrow prev" href="#" ></a>
+    <a class="arrow next" href="#" ></a>
+</div>
+
+
+
+  </div> <!--end of first container-->

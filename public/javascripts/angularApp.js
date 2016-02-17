@@ -1,13 +1,24 @@
 angular
-  .module('shopHLP', ['ui.router', 'angularMoment'])
+  .module('shopHLP', ['ui.router', 'angularMoment', 'ngResource'])
   .config(MainRouter);
 
   function MainRouter($stateProvider, $urlRouterProvider){
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'partials/discover.html',
+      });
 
     $stateProvider
-      .state('business'{
+      .state('calendar', {
+        url: '/calendar',
+        templateUrl: 'partials/calendar.html',
+      });
+
+    $stateProvider
+      .state('business', {
         url: '/business/{id}',
-        templateUrl: '/businessPage.ejs',
+        templateUrl: 'partials/businessPage.html',
       });
 
    $urlRouterProvider.otherwise('/');

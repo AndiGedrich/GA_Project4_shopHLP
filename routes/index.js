@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
   res.render('index', { user : req.user });
 });
 
+
 router.get('/register', function(req, res){
   res.render('register', { });
 });
@@ -42,6 +43,6 @@ router.get('/ping', function(req, res){
 });
 
 ///////businesses API Routing
-var
+
 
 module.exports = router;

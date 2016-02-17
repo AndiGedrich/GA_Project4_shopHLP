@@ -1,5 +1,5 @@
 angular.module('shopHLP')
-  .factory('BusinessService', function(){
+  .factory('BusinessService', ['$http', function($http){
 
     var service = {};
 
@@ -156,4 +156,6 @@ angular.module('shopHLP')
       });
       return Object.keys(obj).sort();
     };
-  });
+
+
+  }]);
