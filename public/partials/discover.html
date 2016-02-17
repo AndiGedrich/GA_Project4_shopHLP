@@ -14,10 +14,51 @@
     <!-- storefront display -->
 <div class="row" ng-controller="BusinessController as biz">
   <div class="container slider">
-    <figure id="storeFronts" ng-repeat="businesses in biz.businesses">
-      <img  id="storeFronts" ng-src="{{businesses.storefront}}" />
-      <figcaption id="storeFrontAddress">{{businesses.name}}</figcaption>
+    <figure id="storeFronts" ng-repeat="businesses in biz.businesses"  ng-click="biz.showBusinessDetail($index)">
+      <img  id="storeFronts" ng-src="{{businesses.storefront}}"/>
+      <figcaption id="storeFrontAddress" >{{businesses.name}}</figcaption>
     </figure>
+  </div>
+
+    <div id="bizDetail" ng-if="biz.current" class="row">
+      <div class="col-md-4">
+        <img id="imageDetail" ng-src="{{biz.current.storefront}}" />
+      </div>
+      <div class="col-md-4">
+        <h2>{{biz.current.name}}</h2>
+        <br>
+        <br>
+        <span class="glyphicon glyphicon-time"></span>
+          <p ng-repeat="day in biz.current.hours">{{day}}</p>
+        <br>
+        <br>
+        <span class="glyphicon glyphicon-home"></span>
+          {{biz.current.address}}
+        <br>
+        <br>
+        <span class="glyphicon glyphicon-phone-alt"></span>
+          {{biz.current.phone}}
+        <br>
+        <br>
+        <span class="glyphicon glyphicon-globe"></span>
+          <a href="{{biz.current.website}}">{{biz.current.website}}</a>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4" id="inventoryDetail">
+          <h4>What we Carry:</h4>
+          <p ng-repeat="category in biz.current.categories">{{categories.category}}</p>
+          <img id="productImage" ng-src="{{image}}">
+        </div>
+        <div class="col-md-4">
+          <div id="eventsDetail">
+            <h4>Upcoming Events</h4>
+            <p ng-repeat="events in biz.current.events">{{events.title}} - {{events.startDate}}</p>
+
+    </div>
+
+
+    </div>
   </div>
     <a class="arrow prev" href="#" ></a>
     <a class="arrow next" href="#" ></a>

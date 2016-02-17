@@ -1,10 +1,14 @@
 angular.module('shopHLP')
-  .factory('BusinessService', ['$http', function($resource){
+  .factory('BusinessService', ['$http', function(){
 
+    var vm = this;
+    vm.all = [];
+    vm.addBusiness = addBusiness;
+    vm.newBusiness = {};
+    vm.getBusinesses = getBusinesses;
+    vm.deleteBusiness = deleteBusiness;
 
-    var service = {};
-
-    service.businesses = [
+    vm.businesses = [
 
       { "name": "Chicas Salon",
         "type": "salon",
@@ -145,9 +149,14 @@ angular.module('shopHLP')
       }
     ];
 
-    service.types = getUnique(service.businesses, 'type');
+    // vm.temp = vm.all.concat(vm.businesses);
+    // vm.all = vm.temp;
+    vm.businesses.forEach(function(business){
+      vm.all.push(business);
+    })
+    vm.types = getUnique(vm.businesses, 'type');
 
-    return service;
+    return vm;
 
 
     function getUnique(arr, field) {
@@ -163,7 +172,33 @@ angular.module('shopHLP')
       $http
         .get('http://localhost:3000/businesses')
         .then(function(response){
-          self.all = response.data.businesses;
+          vm.all = response.data.businesses;
+        });
+    }
+
+    function addBusiness(){
+      $http
+        .post('http://localhost:3000/businesses', vm.newBusiness)
+        .then(function(response){
+          getBusinesses();
+        })
+        vm.newBusiness = {};
+    }
+
+    function updateBusiness(){
+      $http
+        .put('http://localhost:3000/businesses/' + business._id)
+        .then(function(response){
+
+        })
+    }
+
+    function deleteBusiness(business){
+      $http
+        .delete('http://localhost:3000/businesses' + business._id)
+        .then(function(response){
+          var index = vm.all.indexOf(business);
+          vm.all.splice(index, 1);
         });
     }
 

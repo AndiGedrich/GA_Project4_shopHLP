@@ -9,7 +9,6 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 var routes = require('./config/routes');
-var users = require('./routes/users');
 
 var app = express();
 

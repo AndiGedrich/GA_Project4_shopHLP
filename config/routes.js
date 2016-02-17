@@ -51,6 +51,11 @@ router.route('/events/:id')
   .delete(eventsController.removeEvent);
 
 /// USER ROUTES
+
+  /* GET users listing. */
+  // router.get('/', function(req, res, next) {
+  // res.send('respond with a resource');
+  // });
   // router.get('/register', function(req, res){
   //   res.render('register', { });
   // });

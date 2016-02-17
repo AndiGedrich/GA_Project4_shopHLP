@@ -1,5 +1,5 @@
 angular
-  .module('shopHLP', ['ui.router', 'angularMoment', 'ngResource'])
+  .module('shopHLP', ['ui.router', 'angularMoment'])
   .config(MainRouter);
 
   function MainRouter($stateProvider, $urlRouterProvider){
@@ -7,6 +7,10 @@ angular
       .state('home', {
         url: '/',
         templateUrl: 'partials/discover.html',
+      })
+      .state('home.business', {
+        url: '^/:id',
+        templateUrl: 'partials/businessPage.html',
       });
 
     $stateProvider
@@ -15,11 +19,7 @@ angular
         templateUrl: 'partials/calendar.html',
       });
 
-    $stateProvider
-      .state('business', {
-        url: '/business/{id}',
-        templateUrl: 'partials/businessPage.html',
-      });
+
 
    $urlRouterProvider.otherwise('/');
   }
