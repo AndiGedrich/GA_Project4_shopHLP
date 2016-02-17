@@ -1,9 +1,9 @@
 angular.module('shopHLP')
   .controller('BusinessController', BusinessController);
 
-  BusinessController.$inject = ['$state','$stateParams', '$location', 'BusinessService'];
+  BusinessController.$inject = ['$state','$stateParams','BusinessService'];
 
-  function BusinessController( $state, $stateParams, $location, BusinessService){
+  function BusinessController( $state, $stateParams, BusinessService){
     var vm = this;
 
     vm.test = "BIDNESS"

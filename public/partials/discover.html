@@ -29,7 +29,7 @@
         <br>
         <br>
         <span class="glyphicon glyphicon-time"></span>
-          <p ng-repeat="day in biz.current.hours">{{day}}</p>
+          <p ng-repeat="day in biz.current.hours">{{day.day}} - {{day.times}}</p>
         <br>
         <br>
         <span class="glyphicon glyphicon-home"></span>
@@ -44,16 +44,22 @@
           <a href="{{biz.current.website}}">{{biz.current.website}}</a>
       </div>
 
-      <div class="row">
+      <div class="row" style="clear:both">
         <div class="col-md-4" id="inventoryDetail">
           <h4>What we Carry:</h4>
-          <p ng-repeat="category in biz.current.categories">{{categories.category}}</p>
-          <img id="productImage" ng-src="{{image}}">
+          <p ng-repeat="category in biz.current.categories">{{category.category}}</p>
+          <img id="productImage" ng-src="{{category.image}}">
         </div>
         <div class="col-md-4">
           <div id="eventsDetail">
             <h4>Upcoming Events</h4>
             <p ng-repeat="events in biz.current.events">{{events.title}} - {{events.startDate}}</p>
+          </div>
+          <br>
+          <div id="aboutDetail">
+            <h4>About Us</h4>
+            <p>{{biz.current.about}}</p>
+          </div>
 
     </div>
 

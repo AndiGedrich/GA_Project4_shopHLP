@@ -7,11 +7,8 @@ angular
       .state('home', {
         url: '/',
         templateUrl: 'partials/discover.html',
-      })
-      .state('home.business', {
-        url: '^/:id',
-        templateUrl: 'partials/businessPage.html',
       });
+
 
     $stateProvider
       .state('calendar', {

@@ -10,4 +10,8 @@ angular.module('shopHLP')
 
     vm.types = BusinessService.types;
     vm.selectedType = vm.types[0];
+
+    vm.returnHome = function(){
+      window.location.reload();
+    }
   }

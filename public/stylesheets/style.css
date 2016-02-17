@@ -36,6 +36,10 @@ h2 {
 
 }
 
+p {
+  margin-left: 10px;
+}
+
 #discover {
   background-color: black;
 }
@@ -60,4 +64,40 @@ h2 {
   border-width: 1px;
   border-color: black;
   margin-top: 10px;
+}
+
+#eventsDetail{
+  border-style: dashed;
+  border-width: 1px;
+  border-color: grey;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#aboutDetail{
+  border-style: dashed;
+  border-width: 1px;
+  border-color: grey;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/*CALENDAR*/
+
+#grid{
+  background: silver;
+  border: 2px solid;
+  height: 50%;
+  width: 50%;
+}
+
+#grid tr{
+  border: 2px solid;
+}
+
+#grid td{
+  height: 30px;
+  width: 30px;
+  height: 20px;
+  border: 2px solid;
 }
