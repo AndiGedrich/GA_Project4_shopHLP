@@ -18,12 +18,12 @@
         <div class="col-md-5">
           <p>{{vm.date | amDateFormat: 'dddd, MMMM Do YYYY'}}</p>
           <span class="glyphicon glyphicon-chevron-right" ng-click="vm.forwardMonth()"></span>
-            <h2 id="monthDisplay" ng-model="vm.createCalendar">{{vm.date | amDateFormat: 'MMMM YYYY'}}</h2>
+            <h2 id="monthDisplay">{{vm.date | amDateFormat: 'MMMM YYYY'}}</h2>
           <span class="glyphicon glyphicon-chevron-left" ng-click="vm.backMonth()"></span>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6" ng-model="vm.createCalendar">
+        <div class="col-md-6" ng-model="vm.createCalendar" id="calDisplay">
 
         </div>
         <div id="eventDislayBox" class="col-md-6" style="clear:right">

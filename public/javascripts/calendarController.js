@@ -15,30 +15,38 @@ angular.module('shopHLP')
   ///////////cal move forward & back
   var currentMonth = vm.date2;
   console.log('the format of current month is: ' + currentMonth);
+  var newDate2 = {};
 
-    vm.forwardMonth = function(){
-      var currentMonthDay = currentMonth.format('DD');
-        console.log('current month day: ' + currentMonthDay);
-      var nextMonth = currentMonth.add(31, 'days');
-      var date2 = nextMonth;
-        console.log('next month is:' + nextMonth);
-        document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
-        vm.createCalendar()
-        return date2;
-      };
+  vm.forwardMonth = function(){
+    var currentMonthDay = currentMonth.format('DD');
+      console.log('current month day: ' + currentMonthDay);
+    var nextMonth = currentMonth.add(1, 'month');
+      newDate2 = nextMonth;
+      console.log('next month is:' + nextMonth);
+      document.getElementById("monthDisplay").innerHTML = newDate2.format('MMMM YYYY');
+      vm.createCalendar()
+  };
+  // console.log(newDate2)
+  // currentMonth = newDate2;
+  // console.log("new date 2: " + newDate2);
 
-    vm.backMonth = function(){
-      var currentMonthDay = currentMonth.format('DD');
-        console.log('current month day: ' + currentMonthDay);
-      var lastMonth = currentMonth.subtract(31, 'days');
-      var date2 = lastMonth;
-        console.log('last month was:' + lastMonth);
-        document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
-        vm.createCalendar()
-        return date2;
-      };
+  vm.backMonth = function(){
+    console.log('currentMonth: ', currentMonth)
+    var currentMonthDay = currentMonth.format('DD');
+      console.log('current month day: ' + currentMonthDay);
+    var lastMonth = currentMonth.subtract(1, 'month');
+    var date2 = lastMonth;
+      console.log('last month was:' + lastMonth);
+      document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
+      vm.createCalendar()
+      return date2;
+    };
+//////////draw the calendar grid
 
     vm.createCalendar = function(){
+      var c = document.getElementById('calDisplay');
+      c.innerHTML = ""
+
       var today = currentMonth.toString();
       console.log('this is createCal date:' + today);
       console.log("got the date");
@@ -65,7 +73,7 @@ angular.module('shopHLP')
         var generateTable = function(noOfRows,noOfCols){
           var table = document.createElement("table");
           table.setAttribute("id", "grid");
-          document.body.appendChild(table);
+          c.appendChild(table);
           generateRowsWithCols(1,noOfRows,noOfCols);
           placeDates();
         };
@@ -79,7 +87,7 @@ angular.module('shopHLP')
           console.log("this month is:" + monthSubstr);
           var todayNum = Number(todaySubstr);
           console.log('today is:'+ todayNum);
-          var startOfMonth = vm.date2.subtract(todayNum, 'days');
+          var startOfMonth = vm.date2.clone().subtract(todayNum, 'days');
           startOfMonth = startOfMonth.format("ddd");
           console.log('the start of the month was a:' + startOfMonth);
             if(monthSubstr.indexOf("Feb")> -1){
@@ -741,7 +749,7 @@ angular.module('shopHLP')
     vm.createCalendar();
 
 
-    vm.date2 = vm.forwardMonth();
+    //vm.date2 = vm.forwardMonth();
 
     vm.showEvents = function(){
       console.log('working on this');
