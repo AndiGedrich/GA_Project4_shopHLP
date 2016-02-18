@@ -84,14 +84,14 @@ p {
 
 /*CALENDAR*/
 
-#grid{
+#grid {
   background: white;
   border: 2px solid;
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
 }
 
-#grid tr{
+tr{
   border: 2px solid;
 }
 
