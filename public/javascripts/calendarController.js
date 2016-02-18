@@ -23,6 +23,7 @@ angular.module('shopHLP')
       var date2 = nextMonth;
         console.log('next month is:' + nextMonth);
         document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
+        vm.createCalendar()
         return date2;
       };
 
@@ -33,11 +34,12 @@ angular.module('shopHLP')
       var date2 = lastMonth;
         console.log('last month was:' + lastMonth);
         document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
+        vm.createCalendar()
         return date2;
       };
 
     vm.createCalendar = function(){
-      var today = vm.date2.toString();
+      var today = currentMonth.toString();
       console.log('this is createCal date:' + today);
       console.log("got the date");
         var generateRowsWithCols = function(rowStart, noOfRows, noOfCols){
