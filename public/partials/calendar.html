@@ -17,14 +17,20 @@
       <div class="row">
         <div class="col-md-5">
           <p>{{vm.date | amDateFormat: 'dddd, MMMM Do YYYY'}}</p>
-          <span class="glyphicon glyphicon-chevron-right"></span>
-            <h2>{{vm.date | amDateFormat: 'MMMM YYYY'}}</h2>
-          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="glyphicon glyphicon-chevron-right" ng-click="vm.forwardMonth()"></span>
+            <h2 id="monthDisplay">{{vm.date | amDateFormat: 'MMMM YYYY'}}</h2>
+          <span class="glyphicon glyphicon-chevron-left" ng-click="vm.backMonth()"></span>
         </div>
       </div>
-        <div ng-model="vm.createCalendar">
+      <div class="row">
+        <div class="col-md-6" ng-model="vm.createCalendar">
 
         </div>
+        <div id="eventDislayBox" class="col-md-6" style="clear:right">
+          <h2>Events</h2>
+          <p ng-repeat="events in vm.bizEvents">{{events.title}} - {{events.startDate}} - {{events.endDate}} - {{events.startTime}} - {{events.endTime}}</p>
+        </div>
+      </div>
 
       <br>
 

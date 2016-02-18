@@ -10,17 +10,36 @@ angular.module('shopHLP')
 
     vm.date = new Date();
 
-    vm.events = [
-    {}
-    ];
+    vm.date2 =moment();
 
+  ///////////cal move forward & back
+  var currentMonth = vm.date2;
+  console.log('the format of current month is: ' + currentMonth);
+
+    vm.forwardMonth = function(){
+      var currentMonthDay = currentMonth.format('DD');
+        console.log('current month day: ' + currentMonthDay);
+      var nextMonth = currentMonth.add(31, 'days');
+      var date2 = nextMonth;
+        console.log('next month is:' + nextMonth);
+        document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
+        return date2;
+      };
+
+    vm.backMonth = function(){
+      var currentMonthDay = currentMonth.format('DD');
+        console.log('current month day: ' + currentMonthDay);
+      var lastMonth = currentMonth.subtract(31, 'days');
+      var date2 = lastMonth;
+        console.log('last month was:' + lastMonth);
+        document.getElementById("monthDisplay").innerHTML = date2.format('MMMM YYYY');
+        return date2;
+      };
 
     vm.createCalendar = function(){
-      console.log(vm.date);
-      var today = vm.date;
-      var todayString = String(today);
-      if (todayString.indexOf("Feb")>-1){
-        console.log("got the date");
+      var today = vm.date2.toString();
+      console.log('this is createCal date:' + today);
+      console.log("got the date");
         var generateRowsWithCols = function(rowStart, noOfRows, noOfCols){
           if (rowStart> noOfRows)
             return;
@@ -37,7 +56,7 @@ angular.module('shopHLP')
           var row = document.getElementById("tr"+rowStart);
           var td = row.insertCell('td');
           td.setAttribute("id", "td"+rowStart+colStart);
-          td.setAttribute("ng-click", "main.showEvents")
+          td.setAttribute("ng-click", "vm.showEvents()")
           generateCells(++colStart,rowStart,noOfCols);
         };
 
@@ -51,14 +70,14 @@ angular.module('shopHLP')
 
         var placeDates = function(){
           console.log('hello placeDates');
-          var getToday = moment();
-          var getTodayString = String(getToday);
-          var todaySubstr = getTodayString.slice(8, 10);
-          var monthSubstr = getTodayString.slice(4, 7);
+          var getToday = vm.date2.toString();
+          console.log('get today num: ' + getToday);
+          var todaySubstr = getToday.slice(8, 10);
+          var monthSubstr = getToday.slice(4, 7);
           console.log("this month is:" + monthSubstr);
           var todayNum = Number(todaySubstr);
           console.log('today is:'+ todayNum);
-          var startOfMonth = getToday.subtract(todayNum, 'days');
+          var startOfMonth = vm.date2.subtract(todayNum, 'days');
           startOfMonth = startOfMonth.format("ddd");
           console.log('the start of the month was a:' + startOfMonth);
             if(monthSubstr.indexOf("Feb")> -1){
@@ -714,12 +733,13 @@ angular.module('shopHLP')
                               }
                 }
         }
-    }
   generateTable(7,7);
   }
 
     vm.createCalendar();
 
+
+    vm.date2 = vm.forwardMonth();
 
     vm.showEvents = function(){
       console.log('working on this');
