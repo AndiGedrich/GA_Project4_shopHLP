@@ -1,22 +1,31 @@
-<div class="row" id="discover" ng-controller="BusinessController as biz">
-  <div class="col-xs-4 col-md-4" id="">
-    <h2> DISCOVER</h2>
-  </div>
-  <div class="col-xs-4 col-md-4" id="4935york">
-    <img class="btn" id="yorkbtn" src="images/York.jpg">
-  </div>
+<div ng-controller="BusinessController as biz">
+  <div class="row" id="discover" >
+    <div class="col-xs-4 col-md-4" id="">
+      <h2> DISCOVER</h2>
+    </div>
+    <div class="col-xs-4 col-md-4" id="4935york">
+      <img class="btn" id="yorkbtn" src="/images/York.jpg">
+    </div>
 
-  <div class="col-xs-4 col-md-4" id="figueroa">
-    <img class="btn" id="figst" src="images/Fig.jpg">
+    <div class="col-xs-4 col-md-4" id="figueroa">
+      <img class="btn" id="figst" src="/images/Fig.jpg">
+    </div>
+    <div class="col-md-3">
+      <select class="form-control" ng-model="biz.selectedType" ng-options="type for type in biz.types"></select>
+    </div>
+    <div class="col-md-3" ng-controller="BusinessController as biz">
+      <input type="search" class="form-control"  ng-model="biz.search" placeholder="search...">
+    </div>
+
+
   </div>
-</div>
 
     <!-- storefront display -->
-<div class="row" ng-controller="BusinessController as biz">
+<div class="row">
   <div class="container slider">
-    <figure id="storeFronts" ng-repeat="businesses in biz.businesses"  ng-click="biz.showBusinessDetail($index)">
+    <figure id="storeFronts" ng-repeat="businesses in biz.businesses | filter:{type: biz.selectedType} | filter:biz.search"  ng-click="biz.showBusinessDetail($index)">
       <img  id="storeFronts" ng-src="{{businesses.storefront}}"/>
-      <figcaption id="storeFrontAddress" >{{businesses.name}}</figcaption>
+      <figcaption id="storeName" >{{businesses.name}}</figcaption>
     </figure>
   </div>
 
@@ -41,13 +50,13 @@
         <br>
         <br>
         <span class="glyphicon glyphicon-globe"></span>
-          <a href="{{biz.current.website}}">{{biz.current.website}}</a>
+          <a target="_blank" href="{{biz.current.website}}">{{biz.current.website}}</a>
       </div>
 
       <div class="row" style="clear:both">
         <div class="col-md-4" id="inventoryDetail">
-          <h4>What we Carry:</h4>
-          <p ng-repeat="category in biz.current.categories">{{category.category}}</p>
+          <h4>Our Products / Services:</h4>
+          <p ng-repeat="category in biz.current.categories">{{category.category }}</p>
           <img id="productImage" ng-src="{{category.image}}">
         </div>
         <div class="col-md-4">
@@ -61,15 +70,9 @@
             <p>{{biz.current.about}}</p>
           </div>
 
-    </div>
-
+        </div>
+      </div>
 
     </div>
   </div>
-    <a class="arrow prev" href="#" ></a>
-    <a class="arrow next" href="#" ></a>
 </div>
-
-
-
-  </div> <!--end of first container-->
