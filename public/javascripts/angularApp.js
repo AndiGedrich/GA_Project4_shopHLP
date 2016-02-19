@@ -1,5 +1,5 @@
 angular
-  .module('shopHLP', ['ui.router', 'angularMoment'])
+  .module('shopHLP', ['ui.router', 'angularMoment', 'ui.bootstrap'])
   .config(MainRouter);
 
   function MainRouter($stateProvider, $urlRouterProvider){
