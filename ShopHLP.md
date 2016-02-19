@@ -23,8 +23,9 @@ To run this app, please make sure to have the most recent version of NodeJS, Exp
 
 
 App Screenshots:
-![](/desktop/ShopHLP.png)
-![](/desktop/ShopHLP2.png)
+<a href="https://drive.google.com/file/d/0B2Mpn_f0m5y0OTdGTVNNbE56ekE/view?usp=sharing">Photo 1</a>
+<a href="https://drive.google.com/file/d/0B2Mpn_f0m5y0eEFKU0FreW9Xc2M/view?usp=sharing">Photo 2</a>
+
 
 
 
