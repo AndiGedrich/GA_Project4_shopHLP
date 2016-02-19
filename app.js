@@ -8,8 +8,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routes = require('./config/routes');
 
 var app = express();
 
@@ -21,7 +20,7 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(require('express-session')({
   secret: 'keyboard cat',

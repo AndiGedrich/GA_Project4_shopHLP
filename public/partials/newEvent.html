@@ -1,0 +1,52 @@
+<script>
+  $(function(){
+    $("#datepicker").datepicker();
+  });
+</script>
+
+<div class="container">
+  <h2 style="text-align:center">Enter a New Highland Park Event</h2>
+  <div class="col-md-4 col-md-offset-4">
+    <form  ng-submit="vm.addEvent" id="newEvent">
+      <div>
+        <label for="newEvent-title">Title:</label>
+        <input class="form-control" type="text" id="newEvent-title" ng-model="vm.newEvent.title" placeholder="What and Where?">
+      </div>
+
+      <div>
+        <label for="newEvent-dayOfWeek">Recurring Day of the Week?</label>
+        <select class="form-control" id="newEvent-dayOfWeek" ng-model='vm.newEvent.dayOfWeek'>
+          <option value="" disabled>- - Please Select One - -</option>
+          <option value="Sun">Sundays</option>
+          <option value="Mon">Mondays</option>
+          <option value="Tue" selected>Tuesdays</option>
+          <option value="Wed" selected>Wednesdays</option>
+          <option value="Thu" selected>Thursdays</option>
+          <option value="Fri" selected>Fridays</option>
+          <option value="Sat" selected>Saturdays</option>
+          <option value="day" selected>Every Day</option>
+        </select>
+      </div>
+      <div>
+        <label for="newEvent-startDate">Start Date</label>
+        <input class="form-control" type="text" id="datepicker" ng-model="vm.newEvent.startDate" placeholder="12/25/2017">
+      </div>
+      <div>
+        <label for="newEvent-endDate">End Date</label>
+        <input class="form-control" type="text" id="datepicker" ng-model="vm.newEvent.endDate" placeholder="12/25/2017">
+      </div>
+      <div>
+        <label for="newEvent-address">Address</label>
+        <input class="form-control" type="text" id="newEvent-address" ng-model="vm.newEvent.address" placeholder="5100 York Blvd.">
+      </div>
+      <div>
+        <label for="newEvent-cost">Address</label>
+        <input class="form-control" type="text" id="newEvent-cost" ng-model="vm.newEvent.cost" placeholder="enter 0 for free!">
+      </div>
+      <br>
+      <div>
+        <input type="submit" value="Add Event!">
+      </div>
+    </form>
+  </div>
+</div>

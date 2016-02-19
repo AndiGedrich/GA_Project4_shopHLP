@@ -13,6 +13,10 @@ h3{
   color: white;
 }
 
+h2 {
+  color: #29a329;
+}
+
 #logo {
   width: 50px;
   height: 100%;
@@ -30,4 +34,138 @@ h3{
   border-radius: 15px;
   float: right;
 
+}
+
+p {
+  margin-left: 10px;
+}
+
+#discover {
+  background-color: black;
+}
+
+#storeFronts {
+  display: inline-block;
+  height: 200px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#bizDetail {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+#imageDetail {
+  width: 370px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin-top: 10px;
+}
+
+#eventsDetail{
+  border-style: dashed;
+  border-width: 1px;
+  border-color: grey;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#aboutDetail{
+  border-style: dashed;
+  border-width: 1px;
+  border-color: grey;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/*CALENDAR*/
+
+#grid {
+  background: white;
+  border: 2px solid;
+  height: 100%;
+  width: 100%;
+}
+
+tr{
+  border: 2px solid;
+}
+
+td {
+  background-color: white;
+  border: 1px solid;
+}
+
+#ui-datepicker-div{
+  background-color: white;
+}
+
+.eventCalCells {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  text-align: justify;
+  vertical-align: text-top;
+  border-color: #525952;
+}
+
+#td71 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#td72 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#td73 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#td74 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#td75 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#td76 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+#td77 {
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: white;
+  background-color: black;
 }

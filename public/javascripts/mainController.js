@@ -1,8 +1,19 @@
 angular.module('shopHLP')
   .controller('MainController', MainController);
 
-function MainController(){
-  var vm = this;
+  MainController.$inject = ['BusinessService', '$location'];
 
-  vm.test = "Andrea"
-}
+  function MainController(BusinessService, $location){
+    var vm = this;
+
+    vm.test = "Test";
+
+    vm.types = BusinessService.types;
+    vm.selectedType = vm.types[0];
+
+    vm.returnHome = function(){
+      $location.path('/')
+    }
+
+
+  }
