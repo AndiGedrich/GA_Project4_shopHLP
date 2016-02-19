@@ -19,6 +19,9 @@ To run this app, please make sure to have the most recent version of NodeJS, Exp
 
 <a href="https://drive.google.com/file/d/0B2Mpn_f0m5y0dkhLal9RWHRoelk/view?usp=sharing">Wireframes</a>
 
+<a href="http://ec2-52-35-112-68.us-west-2.compute.amazonaws.com:3000/#/">Demo Site</a>
+
+
 App Screenshots:
 ![](/desktop/ShopHLP.png)
 ![](/desktop/ShopHLP2.png)
