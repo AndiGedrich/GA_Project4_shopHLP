@@ -21,6 +21,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    // <script>
+    //   $(function(){
+    //     $('#myCarousel').carousel();
+    //   });
+    // </script>
   </head>
   <body ng-app="shopHLP">
 
@@ -50,15 +56,15 @@
 
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img id="banner" src="images/banner.jpg">
-            <div class="carousel-caption">
-              <h3>Lorem</h3>
-              <p>Something about this picture</p>
-            </div>
+            <img id="first-slide" src="images/banner.jpg">
+                <div class="carousel-caption">
+                  <h3>Lorem</h3>
+                  <p>Something about this picture</p>
+                </div>
           </div>
 
           <div class="item">
-            <img id="banner" src="images/banner2.jpg">
+            <img id="second-slide" src="images/banner2.jpg">
             <div class="carousel-caption">
               <h3>Highland Park's Newest Eatery - Recess</h3>
               <p>Open Now!</p>
@@ -66,7 +72,7 @@
           </div>
 
           <div class="item">
-            <img id="banner" src="images/banner3.jpg">
+            <img id="third-slide" src="images/banner3.jpg">
             <div class="carousel-caption">
               <h3>New Brew</h3>
               <p>Coffee Gets Civil</p>
@@ -75,22 +81,21 @@
         </div>
       <!--controls -->
 
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Prev</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Prev</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
+  </div>
 <!--break into partial -->
   <div class="container-fluid" ui-view>
 
   </div>
-
 
   </body>
 </html>
