@@ -28,7 +28,8 @@
         </div>
         <div id="eventDislayBox" class="col-md-6" style="clear:right">
           <h2>Events</h2>
-          <p ng-repeat="events in vm.bizEvents">{{events.title}} - {{events.startDate}} - {{events.endDate}} - {{events.startTime}} - {{events.endTime}}</p>
+          <p ng-repeat="events in vm.events">{{events.title}} - {{events.startDate}} - {{events.endDate}} - {{events.startTime}} - {{events.endTime}}</p>
+          <ui-sref-active="active" ui-sref="newEvent">Add New Event!</a>
         </div>
       </div>
 

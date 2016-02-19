@@ -95,7 +95,16 @@ tr{
   border: 2px solid;
 }
 
-td{
+td {
+  background-color: white;
+  border: 1px solid;
+}
+
+#ui-datepicker-div{
+  background-color: white;
+}
+
+.eventCalCells {
   width: 100px;
   height: 100px;
   border: 2px solid;

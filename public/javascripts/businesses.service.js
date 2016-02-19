@@ -156,6 +156,8 @@ angular.module('shopHLP')
     })
     vm.types = getUnique(vm.businesses, 'type');
 
+    vm.events = getEvents();
+
     return vm;
 
 
@@ -166,6 +168,14 @@ angular.module('shopHLP')
       });
       return Object.keys(obj).sort();
     };
+
+    function getEvents(){
+      var eventsArray = [];
+      vm.all.forEach(function(business){
+        eventsArray.push(vm.all.events);
+        return eventsArray;
+      })
+    }
 
     getBusinesses();
     function getBusinesses(){
@@ -189,7 +199,7 @@ angular.module('shopHLP')
       $http
         .put('http://localhost:3000/businesses/' + business._id)
         .then(function(response){
-
+          getBusinesses();
         })
     }
 

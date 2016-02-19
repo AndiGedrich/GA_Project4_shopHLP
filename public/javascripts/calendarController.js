@@ -1,12 +1,17 @@
 angular.module('shopHLP')
   .controller('CalendarController', CalendarController);
 
-  CalendarController.$inject = ['BusinessService'];
+  CalendarController.$inject = ['BusinessService', 'EventsService'];
 
-  function CalendarController(BusinessService){
+  function CalendarController(BusinessService, EventsService){
     var vm = this;
 
     vm.bizEvents = BusinessService.events;
+    vm.events = EventsService.all;
+    vm.addEvent = EventsService.addEvent;
+    vm.newEvent = EventsService.newEvent;
+    vm.getEvents = EventsService.getEvents;
+    vm.deleteEvent = EventsService.deleteEvent;
 
     vm.date = new Date();
 
@@ -66,6 +71,7 @@ angular.module('shopHLP')
           var row = document.getElementById("tr"+rowStart);
           var td = row.insertCell('td');
           td.setAttribute("id", "td"+rowStart+colStart);
+          td.setAttribute("class", "eventCalCells");
           td.setAttribute("ng-click", "vm.showEvents()")
           generateCells(++colStart,rowStart,noOfCols);
         };
@@ -754,6 +760,7 @@ angular.module('shopHLP')
     vm.showEvents = function(){
       console.log('working on this');
     };
+
   };
 
 

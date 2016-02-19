@@ -16,6 +16,12 @@ angular
         templateUrl: 'partials/calendar.html',
       });
 
+    $stateProvider
+      .state('newEvent', {
+        url: '/newEvent',
+        templateUrl: 'partials/newEvent.html',
+      });
+
 
 
    $urlRouterProvider.otherwise('/');
