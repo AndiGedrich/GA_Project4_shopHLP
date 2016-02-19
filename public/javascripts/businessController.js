@@ -11,6 +11,8 @@ angular.module('shopHLP')
     vm.businesses = BusinessService.all;
     vm.types = BusinessService.types;
     vm.selectedType = vm.types[0];
+    vm.amount = ['all', 6];
+    vm.selectAmount = 6;
 
     vm.business = BusinessService.all[$stateParams.id];
 

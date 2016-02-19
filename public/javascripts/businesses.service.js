@@ -11,7 +11,7 @@ angular.module('shopHLP')
     vm.businesses = [
 
       { "name": "Chicas Salon",
-        "type": "salon",
+        "type": "Salons",
         "address": "4934 York Blvd",
         "zip": "90042",
         "phone": "3239829809",
@@ -22,6 +22,88 @@ angular.module('shopHLP')
           { "category": "men's salon", "image": " "},
           { "category": "women's salon", "image": " "},
           ],
+
+        "hours": [
+        { "day": "Monday", "times": "10:00am - 7:00pm" },
+        { "day": "Tuesday", "times": "10:00am - 7:00pm"},
+        { "day": "Wednesday", "times": "10:00am - 7:00pm"},
+        { "day": "Thursday", "times": "10:00am - 7:00pm"},
+        { "day": "Friday", "times": "10:00am - 7:00pm"},
+        { "day": "Saturday", "times": "10:00am - 7:00pm"},
+        { "day": "Sunday", "times": "10:00am - 7:00pm"}
+        ],
+        "events": [
+        { "title": "Open House", "startDate": "02/20/2016", "endDate": "02/21/2016", "startTime": "10:00am", "endTime": "7:00pm" }
+        ],
+        "about": "Serving the community since 1986, Chicas Salon ...."
+      },
+      { "name": "Manic Panic Salon",
+        "type": "Salons",
+        "address": "4934 York Blvd",
+        "zip": "90042",
+        "phone": "3239829809",
+        "website": " ",
+        "storefront": "images/storefronts/York_even/5104_YorkBlvd.png",
+        "categories": [
+          { "category": "hair salon", "image": " "},
+          { "category": "men's salon", "image": " "},
+          { "category": "women's salon", "image": " "},
+          ],
+
+        "hours": [
+        { "day": "Monday", "times": "10:00am - 7:00pm" },
+        { "day": "Tuesday", "times": "10:00am - 7:00pm"},
+        { "day": "Wednesday", "times": "10:00am - 7:00pm"},
+        { "day": "Thursday", "times": "10:00am - 7:00pm"},
+        { "day": "Friday", "times": "10:00am - 7:00pm"},
+        { "day": "Saturday", "times": "10:00am - 7:00pm"},
+        { "day": "Sunday", "times": "10:00am - 7:00pm"}
+        ],
+        "events": [
+        { "title": "Open House", "startDate": "02/20/2016", "endDate": "02/21/2016", "startTime": "10:00am", "endTime": "7:00pm" }
+        ],
+        "about": "Serving the community since 1986, Chicas Salon ...."
+      },
+      { "name": "Colorful Nails",
+        "type": "Salons",
+        "address": "4934 York Blvd",
+        "zip": "90042",
+        "phone": "3239829809",
+        "website": " ",
+        "storefront": "images/storefronts/York_even/5036_YorkBlvd.png",
+        "categories": [
+          { "category": "hair salon", "image": " "},
+          { "category": "men's salon", "image": " "},
+          { "category": "women's salon", "image": " "},
+          ],
+
+        "hours": [
+        { "day": "Monday", "times": "10:00am - 7:00pm" },
+        { "day": "Tuesday", "times": "10:00am - 7:00pm"},
+        { "day": "Wednesday", "times": "10:00am - 7:00pm"},
+        { "day": "Thursday", "times": "10:00am - 7:00pm"},
+        { "day": "Friday", "times": "10:00am - 7:00pm"},
+        { "day": "Saturday", "times": "10:00am - 7:00pm"},
+        { "day": "Sunday", "times": "10:00am - 7:00pm"}
+        ],
+        "events": [
+        { "title": "Open House", "startDate": "02/20/2016", "endDate": "02/21/2016", "startTime": "10:00am", "endTime": "7:00pm" }
+        ],
+        "about": "Serving the community since 1986, Chicas Salon ...."
+      },
+      { "name": "Cony's Barber Shop",
+        "type": "Salons",
+        "address": "4934 York Blvd",
+        "zip": "90042",
+        "phone": "3239829809",
+        "website": " ",
+        "storefront": "images/storefronts/York_even/5114_YorkBlvd.png",
+        "categories": [
+          { "category": "hair salon", "image": " "},
+          { "category": "men's salon", "image": " "},
+          { "category": "women's salon", "image": " "},
+          ],
+
         "hours": [
         { "day": "Monday", "times": "10:00am - 7:00pm" },
         { "day": "Tuesday", "times": "10:00am - 7:00pm"},
@@ -146,6 +228,222 @@ angular.module('shopHLP')
         { "title": "Spring Sale", "dayOfWeek": " ", "startDate": "02/20/2016", "endDate": "02/29/2016", "startTime": "12:00pm", "endTime": "8:00pm" }
         ],
         "about": "Affordable vintage fashions for men and women."
+      },
+      { "name": "Footsies",
+        "type": "Bars",
+        "address": "2640 N Figueroa St",
+        "zip": "90065",
+        "phone": "3232599059",
+        "website": "http://www.143.is/about/",
+        "storefront": "images/storefronts/York_even/5006_YorkBlvd.png",
+        "categories": [
+          { "category": "Cocktails", "image": " "},
+          { "category": "DJs", "image": " "},
+          { "category": "Happy Hour", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "5:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "5:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "5:00pm - 2:00am"},
+        { "day": "Thursday", "times": "5:00pm - 2:00am"},
+        { "day": "Friday", "times": "5:00pm - 2:00am"},
+        { "day": "Saturday", "times": "5:00pm - 2:00am"},
+        { "day": "Sunday", "times": "5:00pm - 2:00am"}
+        ],
+        "events": [
+        { "title": "Happy Hour", "dayOfWeek": "Daily", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "5:00pm", "endTime": "8:00pm" },
+        { "title": "80s Dance Music", "dayOfWeek": "Fridays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "9:00pm", "endTime": "2:00am" }
+        ],
+        "about": "Great cocktails, cheap beer and awesome music to get your swerve to!"
+      },
+      { "name": "The Hermosillo",
+        "type": "Bars",
+        "address": "2640 N Figueroa St",
+        "zip": "90065",
+        "phone": "3232599059",
+        "website": "http://www.143.is/about/",
+        "storefront": "images/storefronts/York_even/5006_YorkBlvd.png",
+        "categories": [
+          { "category": "Cocktails", "image": " "},
+          { "category": "DJs", "image": " "},
+          { "category": "Happy Hour", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "5:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "5:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "5:00pm - 2:00am"},
+        { "day": "Thursday", "times": "5:00pm - 2:00am"},
+        { "day": "Friday", "times": "5:00pm - 2:00am"},
+        { "day": "Saturday", "times": "5:00pm - 2:00am"},
+        { "day": "Sunday", "times": "5:00pm - 2:00am"}
+        ],
+        "events": [
+        { "title": "Happy Hour", "dayOfWeek": "Daily", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "5:00pm", "endTime": "8:00pm" },
+        { "title": "80s Dance Music", "dayOfWeek": "Fridays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "9:00pm", "endTime": "2:00am" }
+        ],
+        "about": "Great cocktails, cheap beer and awesome music to get your swerve to!"
+      },
+      { "name": "La Cuevita",
+        "type": "Bars",
+        "address": "2640 N Figueroa St",
+        "zip": "90065",
+        "phone": "3232599059",
+        "website": "http://www.143.is/about/",
+        "storefront": "images/storefronts/York_even/5006_YorkBlvd.png",
+        "categories": [
+          { "category": "Cocktails", "image": " "},
+          { "category": "DJs", "image": " "},
+          { "category": "Happy Hour", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "5:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "5:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "5:00pm - 2:00am"},
+        { "day": "Thursday", "times": "5:00pm - 2:00am"},
+        { "day": "Friday", "times": "5:00pm - 2:00am"},
+        { "day": "Saturday", "times": "5:00pm - 2:00am"},
+        { "day": "Sunday", "times": "5:00pm - 2:00am"}
+        ],
+        "events": [
+        { "title": "Happy Hour", "dayOfWeek": "Daily", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "5:00pm", "endTime": "8:00pm" },
+        { "title": "80s Dance Music", "dayOfWeek": "Fridays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "9:00pm", "endTime": "2:00am" }
+        ],
+        "about": "Great cocktails, cheap beer and awesome music to get your swerve to!"
+      },
+      { "name": "The Greyhound",
+        "type": "Bars",
+        "address": "2640 N Figueroa St",
+        "zip": "90065",
+        "phone": "3232599059",
+        "website": "http://www.143.is/about/",
+        "storefront": "images/storefronts/York_even/5006_YorkBlvd.png",
+        "categories": [
+          { "category": "Cocktails", "image": " "},
+          { "category": "DJs", "image": " "},
+          { "category": "Happy Hour", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "5:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "5:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "5:00pm - 2:00am"},
+        { "day": "Thursday", "times": "5:00pm - 2:00am"},
+        { "day": "Friday", "times": "5:00pm - 2:00am"},
+        { "day": "Saturday", "times": "5:00pm - 2:00am"},
+        { "day": "Sunday", "times": "5:00pm - 2:00am"}
+        ],
+        "events": [
+        { "title": "Happy Hour", "dayOfWeek": "Daily", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "5:00pm", "endTime": "8:00pm" },
+        { "title": "80s Dance Music", "dayOfWeek": "Fridays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "9:00pm", "endTime": "2:00am" }
+        ],
+        "about": "Great cocktails, cheap beer and awesome music to get your swerve to!"
+      },
+      { "name": "Sonny's Hideaway",
+        "type": "Bars",
+        "address": "2640 N Figueroa St",
+        "zip": "90065",
+        "phone": "3232599059",
+        "website": "http://www.143.is/about/",
+        "storefront": "images/storefronts/York_even/5006_YorkBlvd.png",
+        "categories": [
+          { "category": "Cocktails", "image": " "},
+          { "category": "DJs", "image": " "},
+          { "category": "Happy Hour", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "5:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "5:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "5:00pm - 2:00am"},
+        { "day": "Thursday", "times": "5:00pm - 2:00am"},
+        { "day": "Friday", "times": "5:00pm - 2:00am"},
+        { "day": "Saturday", "times": "5:00pm - 2:00am"},
+        { "day": "Sunday", "times": "5:00pm - 2:00am"}
+        ],
+        "events": [
+        { "title": "Happy Hour", "dayOfWeek": "Daily", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "5:00pm", "endTime": "8:00pm" },
+        { "title": "80s Dance Music", "dayOfWeek": "Fridays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "9:00pm", "endTime": "2:00am" }
+        ],
+        "about": "Great cocktails, cheap beer and awesome music to get your swerve to!"
+      },
+      { "name": "Highland Cafe",
+        "type": "Coffee Shop",
+        "address": "5010 York Blvd",
+        "zip": "90042",
+        "phone": "3232599059",
+        "website": "http://www.thehighlandcafela.com/",
+        "storefront": "images/storefronts/York_even/5006_12_YorkBlvd.png",
+        "categories": [
+          { "category": "Intelligensia Coffee", "image": " "},
+          { "category": "Brunch", "image": " "},
+          { "category": "Pastries", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "8:00am - 7:00pm"},
+        { "day": "Tuesday", "times": "8:00am - 7:00pm"},
+        { "day": "Wednesday", "times": "8:00am - 7:00pm"},
+        { "day": "Thursday", "times": "8:00am - 7:00pm"},
+        { "day": "Friday", "times": "8:00am - 7:00pm"},
+        { "day": "Saturday", "times": "8:00am - 7:00pm"},
+        { "day": "Sunday", "times": "8:00am - 7:00pm"}
+        ],
+        "events": [
+        { "title": "Brunch", "dayOfWeek": "Sundays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "10:00am", "endTime": "3:00pm" },
+        { "title": "Brunch", "dayOfWeek": "Saturdays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "10:00am", "endTime": "3:00pm" }
+        ],
+        "about": "Great coffee, free wifi and killer chilequiles!"
+      },
+      { "name": "The York",
+        "type": "Bars",
+        "address": "5020 York Blvd",
+        "zip": "90042",
+        "phone": "3232599059",
+        "website": "https://www.facebook.com/Urchin-Vintage-150524738378348/",
+        "storefront": "images/storefronts/York_even/5020_YorkBlvd.jpg",
+        "categories": [
+          { "category": "Craft Beer", "image": " "},
+          { "category": "Cocktails", "image": " "},
+          { "category": "Happy Hour", "image": " "},
+          { "category": "Pub Food", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "12:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "12:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "12:00pm - 2:00am"},
+        { "day": "Thursday", "times": "12:00pm - 2:00am"},
+        { "day": "Friday", "times": "12:00pm - 2:00am"},
+        { "day": "Saturday", "times": "12:00pm - 2:00am"},
+        { "day": "Sunday", "times": "12:00pm - 2:00am"}
+        ],
+        "events": [
+        { "title": "Trivia Night", "dayOfWeek": "Mondays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "8:00pm", "endTime": "10:00pm" }
+        ],
+        "about": "Great food, strong drinks and comfortable seating.  Best bar in Highland Park"
+      },
+      { "name": "The Roost",
+        "type": "Bars",
+        "address": "5044 York Blvd",
+        "zip": "90042",
+        "phone": "3232599059",
+        "website": "https://www.facebook.com/TheRoostCocktails/",
+        "storefront": "images/storefronts/York_even/5044_YorkBlvd.png",
+        "categories": [
+          { "category": "Craft Beer", "image": " "},
+          { "category": "Cocktails", "image": " "},
+          { "category": "Happy Hour", "image": " "},
+          { "category": "Pub Food", "image": " "}
+          ],
+        "hours": [
+        { "day": "Monday", "times": "12:00pm - 2:00am"},
+        { "day": "Tuesday", "times": "12:00pm - 2:00am"},
+        { "day": "Wednesday", "times": "12:00pm - 2:00am"},
+        { "day": "Thursday", "times": "12:00pm - 2:00am"},
+        { "day": "Friday", "times": "12:00pm - 2:00am"},
+        { "day": "Saturday", "times": "12:00pm - 2:00am"},
+        { "day": "Sunday", "times": "12:00pm - 2:00am"}
+        ],
+        "events": [
+          { "title": "Trivia Night", "dayOfWeek": "Mondays", "startDate": "02/20/2016", "endDate": "02/28/2017", "startTime": "8:00pm", "endTime": "10:00pm" }
+        ],
+        "about": "Family run local watering hole.  Over 20 beers on draft and great pub food."
       }
     ];
 

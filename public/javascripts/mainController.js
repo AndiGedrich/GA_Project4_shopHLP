@@ -21,7 +21,7 @@ angular.module('shopHLP')
     { "image": "images/banner3.jpg", "caption": "New Brew", "caption2": "Coffee Gets Civil"}
     ];
 
-    vm.myInterval = 3000;
+    vm.myInterval = 4000;
 
     return vm;
 

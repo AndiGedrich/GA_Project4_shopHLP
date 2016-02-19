@@ -263,7 +263,7 @@ angular.module('shopHLP')
                       document.getElementById("td77").innerHTML ="Sunday";
                     }
                       else if (startOfMonth.indexOf("Wed")> -1){
-                        document.getElementById("td21").innerHTML = "31";
+                        document.getElementById("td21").innerHTML ="31";
                         document.getElementById("td22").innerHTML="30";
                         document.getElementById("td23").innerHTML="29";
                         document.getElementById("td24").innerHTML="28";
@@ -307,8 +307,8 @@ angular.module('shopHLP')
                         document.getElementById("td77").innerHTML ="Sunday";
                       }
                         else if (startOfMonth.indexOf("Thu")> -1){
-                          document.getElementById("td11").innerHTML = "31";
-                          document.getElementById("td21").innerHTML = "30";
+                          document.getElementById("td17").innerHTML ="31";
+                          document.getElementById("td21").innerHTML ="30";
                           document.getElementById("td22").innerHTML="29";
                           document.getElementById("td23").innerHTML="28";
                           document.getElementById("td24").innerHTML="27";
@@ -352,8 +352,8 @@ angular.module('shopHLP')
                           document.getElementById("td77").innerHTML ="Sunday";
                         }
                           else if (startOfMonth.indexOf("Fri")> -1){
-                            document.getElementById("td12").innerHTML = "31";
-                            document.getElementById("td11").innerHTML = "30";
+                            document.getElementById("td16").innerHTML = "31";
+                            document.getElementById("td17").innerHTML = "30";
                             document.getElementById("td21").innerHTML = "29";
                             document.getElementById("td22").innerHTML="28";
                             document.getElementById("td23").innerHTML="27";
@@ -398,44 +398,37 @@ angular.module('shopHLP')
                             document.getElementById("td77").innerHTML ="Sunday";
                           }
                             else {
-                              document.getElementById("td12").innerHTML = "31";
-                              document.getElementById("td12").innerHTML = "30";
-                              document.getElementById("td11").innerHTML = "29";
-                              document.getElementById("td21").innerHTML = "28";
-                              document.getElementById("td22").innerHTML="27";
-                              document.getElementById("td23").innerHTML="26";
-                              document.getElementById("td24").innerHTML="25";
-                              document.getElementById("td25").innerHTML ="24";
-                              document.getElementById("td26").innerHTML ="23";
-                              document.getElementById("td27").innerHTML ="22";
-                              document.getElementById("td31").innerHTML ="21";
-                              document.getElementById("td32").innerHTML ="20";
-                              document.getElementById("td33").innerHTML ="19";
-                              document.getElementById("td34").innerHTML ="18";
-                              document.getElementById("td35").innerHTML ="17";
-                              document.getElementById("td36").innerHTML ="16";
-                              document.getElementById("td37").innerHTML ="15";
-                              document.getElementById("td41").innerHTML ="14";
-                              document.getElementById("td42").innerHTML ="13";
-                              document.getElementById("td43").innerHTML ="12";
-                              document.getElementById("td44").innerHTML ="11";
-                              document.getElementById("td45").innerHTML ="10";
-                              document.getElementById("td46").innerHTML ="9";
-                              document.getElementById("td47").innerHTML ="8";
-                              document.getElementById("td51").innerHTML ="7";
-                              document.getElementById("td52").innerHTML ="6";
-                              document.getElementById("td53").innerHTML ="5";
-                              document.getElementById("td54").innerHTML ="4";
-                              document.getElementById("td55").innerHTML ="3";
-                              document.getElementById("td56").innerHTML ="2";
-                              document.getElementById("td57").innerHTML ="1";
-                              document.getElementById("td61").innerHTML =" ";
-                              document.getElementById("td62").innerHTML =" ";
-                              document.getElementById("td63").innerHTML =" ";
-                              document.getElementById("td64").innerHTML =" ";
-                              document.getElementById("td65").innerHTML =" ";
-                              document.getElementById("td66").innerHTML =" ";
-                              document.getElementById("td67").innerHTML =" ";
+                              document.getElementById("td25").innerHTML ="31";
+                              document.getElementById("td26").innerHTML ="30";
+                              document.getElementById("td27").innerHTML ="29";
+                              document.getElementById("td31").innerHTML ="28";
+                              document.getElementById("td32").innerHTML ="27";
+                              document.getElementById("td33").innerHTML ="26";
+                              document.getElementById("td34").innerHTML ="25";
+                              document.getElementById("td35").innerHTML ="24";
+                              document.getElementById("td36").innerHTML ="23";
+                              document.getElementById("td37").innerHTML ="22";
+                              document.getElementById("td41").innerHTML ="21";
+                              document.getElementById("td42").innerHTML ="20";
+                              document.getElementById("td43").innerHTML ="19";
+                              document.getElementById("td44").innerHTML ="18";
+                              document.getElementById("td45").innerHTML ="17";
+                              document.getElementById("td46").innerHTML ="16";
+                              document.getElementById("td47").innerHTML ="15";
+                              document.getElementById("td51").innerHTML ="14";
+                              document.getElementById("td52").innerHTML ="13";
+                              document.getElementById("td53").innerHTML ="12";
+                              document.getElementById("td54").innerHTML ="11";
+                              document.getElementById("td55").innerHTML ="10";
+                              document.getElementById("td56").innerHTML ="9";
+                              document.getElementById("td57").innerHTML ="8";
+                              document.getElementById("td61").innerHTML ="7";
+                              document.getElementById("td62").innerHTML ="6";
+                              document.getElementById("td63").innerHTML ="5";
+                              document.getElementById("td64").innerHTML ="4";
+                              document.getElementById("td65").innerHTML ="3";
+                              document.getElementById("td66").innerHTML ="2";
+                              document.getElementById("td67").innerHTML ="1";
                               document.getElementById("td71").innerHTML ="Saturday";
                               document.getElementById("td72").innerHTML ="Friday";
                               document.getElementById("td73").innerHTML ="Thursday";
@@ -657,7 +650,7 @@ angular.module('shopHLP')
                             document.getElementById("td77").innerHTML ="Sunday";
                           }
                             else if (startOfMonth.indexOf("Fri")> -1){
-                              document.getElementById("td11").innerHTML = "30";
+                              document.getElementById("td17").innerHTML = "30";
                               document.getElementById("td21").innerHTML = "29";
                               document.getElementById("td22").innerHTML="28";
                               document.getElementById("td23").innerHTML="27";
@@ -702,43 +695,38 @@ angular.module('shopHLP')
                               document.getElementById("td77").innerHTML ="Sunday";
                             }
                               else {
-                                document.getElementById("td12").innerHTML = "30";
-                                document.getElementById("td11").innerHTML = "29";
-                                document.getElementById("td21").innerHTML = "28";
-                                document.getElementById("td22").innerHTML="27";
-                                document.getElementById("td23").innerHTML="26";
-                                document.getElementById("td24").innerHTML="25";
-                                document.getElementById("td25").innerHTML ="24";
-                                document.getElementById("td26").innerHTML ="23";
-                                document.getElementById("td27").innerHTML ="22";
-                                document.getElementById("td31").innerHTML ="21";
-                                document.getElementById("td32").innerHTML ="20";
-                                document.getElementById("td33").innerHTML ="19";
-                                document.getElementById("td34").innerHTML ="18";
-                                document.getElementById("td35").innerHTML ="17";
-                                document.getElementById("td36").innerHTML ="16";
-                                document.getElementById("td37").innerHTML ="15";
-                                document.getElementById("td41").innerHTML ="14";
-                                document.getElementById("td42").innerHTML ="13";
-                                document.getElementById("td43").innerHTML ="12";
-                                document.getElementById("td44").innerHTML ="11";
-                                document.getElementById("td45").innerHTML ="10";
-                                document.getElementById("td46").innerHTML ="9";
-                                document.getElementById("td47").innerHTML ="8";
-                                document.getElementById("td51").innerHTML ="7";
-                                document.getElementById("td52").innerHTML ="6";
-                                document.getElementById("td53").innerHTML ="5";
-                                document.getElementById("td54").innerHTML ="4";
-                                document.getElementById("td55").innerHTML ="3";
-                                document.getElementById("td56").innerHTML ="2";
-                                document.getElementById("td57").innerHTML ="1";
-                                document.getElementById("td61").innerHTML =" ";
-                                document.getElementById("td62").innerHTML =" ";
-                                document.getElementById("td63").innerHTML =" ";
-                                document.getElementById("td64").innerHTML =" ";
-                                document.getElementById("td65").innerHTML =" ";
-                                document.getElementById("td66").innerHTML =" ";
-                                document.getElementById("td67").innerHTML =" ";
+
+                                document.getElementById("td25").innerHTML ="31";
+                                document.getElementById("td26").innerHTML ="30";
+                                document.getElementById("td27").innerHTML ="29";
+                                document.getElementById("td31").innerHTML ="28";
+                                document.getElementById("td32").innerHTML ="27";
+                                document.getElementById("td33").innerHTML ="26";
+                                document.getElementById("td34").innerHTML ="25";
+                                document.getElementById("td35").innerHTML ="24";
+                                document.getElementById("td36").innerHTML ="23";
+                                document.getElementById("td37").innerHTML ="22";
+                                document.getElementById("td41").innerHTML ="21";
+                                document.getElementById("td42").innerHTML ="20";
+                                document.getElementById("td43").innerHTML ="19";
+                                document.getElementById("td44").innerHTML ="18";
+                                document.getElementById("td45").innerHTML ="17";
+                                document.getElementById("td46").innerHTML ="16";
+                                document.getElementById("td47").innerHTML ="15";
+                                document.getElementById("td51").innerHTML ="14";
+                                document.getElementById("td52").innerHTML ="13";
+                                document.getElementById("td53").innerHTML ="12";
+                                document.getElementById("td54").innerHTML ="11";
+                                document.getElementById("td55").innerHTML ="10";
+                                document.getElementById("td56").innerHTML ="9";
+                                document.getElementById("td57").innerHTML ="8";
+                                document.getElementById("td61").innerHTML ="7";
+                                document.getElementById("td62").innerHTML ="6";
+                                document.getElementById("td63").innerHTML ="5";
+                                document.getElementById("td64").innerHTML ="4";
+                                document.getElementById("td65").innerHTML ="3";
+                                document.getElementById("td66").innerHTML ="2";
+                                document.getElementById("td67").innerHTML ="1";
                                 document.getElementById("td71").innerHTML ="Saturday";
                                 document.getElementById("td72").innerHTML ="Friday";
                                 document.getElementById("td73").innerHTML ="Thursday";
