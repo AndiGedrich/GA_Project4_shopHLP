@@ -1,10 +1,10 @@
 angular.module('shopHLP')
-  .factory('EventsService', ['$http', '$location', function(){
+  .factory('EventsService', [ '$http', '$location', function(){
 
     var vm = this;
 
     vm.all = [];
-    vm.addEvent = addEvent();
+    vm.addEvent = addEvent;
     vm.newEvent = {};
     vm.getEvents = getEvents;
     vm.deleteEvent = deleteEvent;
