@@ -1,11 +1,16 @@
-var express = require('express'),
-    router = express.Router(),
+var express = require('express');
+var passport = require('passport');
+var User = require('../models/user');
+var router = express.Router(),
     bodyParser = require('body-parser');
 
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { user : req.user });
 });
+
+//user routes
+
 
 var businessesController = require('../controllers/businesses');
 
@@ -50,44 +55,9 @@ router.route('/events/:id')
   //DELETE remove specific event from DB
   .delete(eventsController.removeEvent);
 
-/// USER ROUTES
 
-  /* GET users listing. */
-  // router.get('/', function(req, res, next) {
-  // res.send('respond with a resource');
-  // });
-  // router.get('/register', function(req, res){
-  //   res.render('register', { });
-  // });
 
-  // router.post('/register', function(req, res){
-  //   Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account){
-  //     if (err){
-  //       return res.render('register', { user : user});
-  //     }
 
-  //     passport.authenticate('local')(req, res, function(){
-  //       res.redirect('/');
-  //     });
-  //   });
-  // });
-
-  // router.get('/login', function(req, res){
-  //   res.render('login', { user : req.user });
-  // });
-
-  // router.post('/login', passport.authenticate('local'), function(req, res){
-  //   res.redirect('/');
-  // });
-
-  // router.get('/logout', function(req, res){
-  //   req.logout();
-  //   res.redirect('/');
-  // });
-
-  // router.get('/ping', function(req, res){
-  //   res.status(200).send('pong');
-  // });
 
 
 

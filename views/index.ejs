@@ -18,6 +18,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
     <script src="/javascripts/mainController.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
 
   </head>
   <body ng-app="shopHLP">
@@ -59,62 +62,70 @@
   </div>
 
   <footer class="footer">
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">
       Business Log In
     </button>
 
-    <div class="container">
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
+<!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    <!--modal content -->
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h2 class="modal-title center" id="myModalLabel">Log In</h2>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title center">Log In</h2>
             </div>
             <div class="modal-body">
-              <div class="row">
-                <h4 class="center">Or login with your registered account...</h4>
-                <div class="col-md-12 center">
-                    <form action="/login" method="post">
-                      <div>
-                      <input class="input" type="text" name="email" value="" placeholder="email"/>
-                      </div>
-                      <div>
-                      <input class="input" type="password" name="password" value="" placeholder="password"/>
-                      </div>
-                      <input id="submit-login" type="submit" value"login">
-                    </form>
-                </div>
-                <div class="col-md-12 center">
-                  <div class="modal-header">
-                    <h2 class="modal-title center" id="myModalLabel">Sign Up</h2>
+              <div class="tabbable">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tab1" data-toggle="tab">Have an Account?</a></li>
+                  <li><a href="#tab2" data-toggle="tab">Register New Account</a></li>
+                </ul>
+              <div class="tab-content">
+              <div class="tab-pane active" id="tab1">
+                <form action="/login" method="post">
+                  <div>
+                    <label>Email</label>
+                    <input class="input" type="text" name="email" value="" placeholder="email"/>
                   </div>
-                  <div class="row">
-                    <form action="/signup" method="post">
-                      <div id="signup-spacer">
-                      <input class="input" type="text" name="firstName" value="" placeholder="first name"/>
-                      </div>
-                      <div>
-                      <input class="input" type="text" name="lastName" value="" placeholder="last name"/>
-                      </div>
-                      <div>
-                      <input class="input" type="text" name="email" value="" placeholder="email"/>
-                      </div>
-                      <div>
-                      <input class="input" type="password" name="password" value="" placeholder="password"/>
-                      </div>
-                      <div>
-                      <input id="submit-signup" type="submit" value"signUp">
-                      </div>
-                    </form>
+                  <div>
+                    <label>Password</label>
+                    <input class="input" type="password" name="password" value="" placeholder="password"/>
                   </div>
-                  </div>
+                  <input id="submit-login" type="submit" value="login">
+                </form>
               </div>
+              <div class="tab-pane" id="tab2">
+                <form action="/register" method="post">
+                  <div>
+                    <label>Email</label>
+                    <input class="input" type="text" name="email" value="" placeholder="email"/>
+                  </div>
+                  <div>
+                    <label>Password</label>
+                    <input class="input" type="password" name="password" value="" placeholder="password"/>
+                  </div>
+                  <div>
+                    <label>Confirm Password</label>
+                    <input class="input" type="password" name="password" value="" placeholder="password"/>
+                  </div>
+                 <div>
+                    <label>Registration Key</label>
+                    <input class="input" type="text" name="registrationKey" value="" placeholder="registration key"/>
+                  </div>
+                    <input id="submit-register" type="submit" value="register">
+                </form>
+              </div>
+              </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input type="button" data-dismiss="modal" value="cancel">
             </div>
           </div>
         </div>
-      </div>
+    </div>
+  </footer>
 
   </body>
 </html>
