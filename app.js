@@ -41,7 +41,7 @@ app.use('/', routes);
 // passport.deserializeUser(User.deserializeUser());
 
 //mongoose NEED TO RECONFIG TO DEPLOY
-mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
+//mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
